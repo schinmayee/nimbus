@@ -40,6 +40,9 @@ LFLAGS  += -lleveldb
 LFLAGS  += -lprotobuf
 LFLAGS  += -lboost_thread -lboost_system -lboost_program_options -lboost_filesystem
 
+# Adding google log -- chinmayee
+LFLAGS += -lglog
+
 # -L params for linking invocation, only for executables
 LDFLAGS  = -L${NIMBUS_ROOT}/lib                 # Link with nimbus library
 LDFLAGS += -L${BOOST_ROOT}/lib                  # Link with boost library

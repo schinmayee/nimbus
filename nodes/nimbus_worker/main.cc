@@ -39,6 +39,7 @@
   */
 #include <dlfcn.h>
 #include <boost/program_options.hpp>
+#include <glog/logging.h>
 #include <iostream>  // NOLINT
 #include <sstream> // NOLINT
 #include "src/shared/nimbus.h"
@@ -47,6 +48,8 @@
 using namespace nimbus; // NOLINT
 
 int main(int argc, char *argv[]) {
+  google::InitGoogleLogging(argv[0]);
+
   namespace po = boost::program_options;
 
   port_t listening_port;
